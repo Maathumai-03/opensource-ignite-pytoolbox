@@ -8,7 +8,7 @@ console = Console()
 
 
 def _to_lower_case(text: str) -> str:
-    return text.lower()
+    return text.upper()
 
 
 def _word_count(text: str) -> int:
