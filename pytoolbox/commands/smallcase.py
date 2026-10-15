@@ -1,14 +1,14 @@
 import typer
 from rich.console import Console
 
-NAME = "smallcace"
-HELP = "Convert a string to small case."
+NAME = "smallcase"
+HELP = "Convert a string to lowercase."
 
 console = Console()
 
 
-def _to_title_case(text: str) -> str:
-    return text.title()
+def _to_lower_case(text: str) -> str:
+    return text.lower()
 
 
 def _word_count(text: str) -> int:
@@ -20,7 +20,7 @@ def main(text: str, show_word_count: bool = False) -> None:
         console.print("[red]Error:[/red] text must not be blank")
         raise typer.Exit(code=1)
 
-    result = _to_title_case(text)
+    result = _to_lower_case(text)
     console.print(result)
 
     if show_word_count:
